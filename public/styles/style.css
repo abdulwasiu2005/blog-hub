@@ -1,0 +1,244 @@
+
+/* Blog Hub theme: one primary and one secondary colour */
+:root {
+    --bs-primary: #FB454C;
+    --bs-primary-rgb: 251, 69, 76;
+
+    --bs-secondary: #343A40;
+    --bs-secondary-rgb: 52, 58, 64;
+
+    --blog-primary: #FB454C;
+    --blog-secondary: #343A40;
+    --navbar-height: 85px;
+}
+
+/* Page defaults */
+body {
+    padding-top: var(--navbar-height);
+}
+
+.site-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #EFEFEF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.site-navbar-inner {
+    min-height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.site-logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.site-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav-links .nav-link {
+    color: var(--blog-secondary);
+    padding: 0.5rem 0.65rem;
+    text-decoration: none;
+}
+
+.site-nav-links .nav-link:hover,
+.site-nav-links .nav-link:focus {
+    color: var(--blog-primary);
+}
+
+.site-nav-action {
+    flex-shrink: 0;
+}
+
+.link-edit {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--blog-primary);
+    --bs-btn-border-color: var(--blog-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #D9363D;
+    --bs-btn-hover-border-color: #D9363D;
+    --bs-btn-active-bg: #D9363D;
+    --bs-btn-active-border-color: #D9363D;
+}
+
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--blog-secondary);
+    --bs-btn-border-color: var(--blog-secondary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #23272B;
+    --bs-btn-hover-border-color: #23272B;
+}
+
+/* Secondary text colour */
+.text-secondary {
+    color: var(--blog-secondary) !important;
+}
+
+
+/* Smaller screens: keep navigation on a separate row */
+@media (max-width: 767.98px) {
+    :root {
+        --navbar-height: 135px;
+    }
+
+    .site-navbar-inner {
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        gap: 0.25rem;
+    }
+
+    .site-logo img {
+        height: 45px;
+    }
+
+    .site-nav-links {
+        order: 3;
+        width: 100%;
+        gap: 0;
+    }
+
+    .site-nav-links .nav-link {
+        padding: 0.35rem 0.5rem;
+    }
+
+    .site-nav-action {
+        order: 2;
+    }
+}
+
+/* =================================
+   BLOG HUB: GLOBAL COLOR OVERRIDES
+   Keep this at the VERY END of style.css
+================================= */
+
+:root {
+    --bs-primary: #FB454C;
+    --bs-primary-rgb: 251, 69, 76;
+
+    --bs-secondary: #343A40;
+    --bs-secondary-rgb: 52, 58, 64;
+
+    --blog-primary: #FB454C;
+    --blog-secondary: #343A40;
+}
+
+/* Primary buttons */
+.btn-primary {
+    background-color: #FB454C !important;
+    border-color: #FB454C !important;
+    color: #FFFFFF !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-primary:active {
+    background-color: #D9363D !important;
+    border-color: #D9363D !important;
+    color: #FFFFFF !important;
+}
+
+/* Outline primary buttons */
+.btn-outline-primary {
+    color: #FB454C !important;
+    border-color: #FB454C !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus-visible,
+.btn-outline-primary:active {
+    background-color: #FB454C !important;
+    border-color: #FB454C !important;
+    color: #FFFFFF !important;
+}
+
+/* Primary backgrounds and text */
+.bg-primary {
+    background-color: #FB454C !important;
+}
+
+.text-primary {
+    color: #FB454C !important;
+}
+
+.border-primary {
+    border-color: #FB454C !important;
+}
+
+/* Secondary buttons */
+.btn-secondary {
+    background-color: #343A40 !important;
+    border-color: #343A40 !important;
+    color: #FFFFFF !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background-color: #23272B !important;
+    border-color: #23272B !important;
+    color: #FFFFFF !important;
+}
+
+/* Secondary text and backgrounds */
+.text-secondary {
+    color: #343A40 !important;
+}
+
+.bg-secondary {
+    background-color: #343A40 !important;
+}
+
+.border-secondary {
+    border-color: #343A40 !important;
+}
+
+/* Links */
+a:not(.btn):hover {
+    color: #FB454C;
+}
+
+/* Navbar links */
+.site-nav-links .nav-link:hover,
+.site-nav-links .nav-link:focus-visible {
+    color: #FB454C !important;
+}
+
+/* Bootstrap badge */
+.badge.text-bg-primary {
+    background-color: #FB454C !important;
+    color: #FFFFFF !important;
+}
+
+.new {
+    background-color: #C28E5B !important;
+}

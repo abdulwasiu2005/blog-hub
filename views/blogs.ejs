@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Hub</title>
+</head>
+<body>
+     <% if(locals.category) { %>
+        <h1>All Blogs on <%= category %></h1>
+   <% } else {%>
+    <h1>All Blogs</h1>
+ <% } %>
+   
+        <% if(allBlogs.length === 0) { %>
+            <p>No Blogs to show. Click the new post to create blog.</p>
+         <% } else { %>
+             <ul> 
+            <% allBlogs.forEach(blog => { %>
+                <li><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></li>
+            <% }); %>
+            </ul>
+        <% } %>
+        
+    <a href="/">Home</a>
+</body>
+</html>

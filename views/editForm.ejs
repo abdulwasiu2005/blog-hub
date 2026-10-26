@@ -1,0 +1,13 @@
+<h2>Edit Blog</h2>
+
+<form action="/blogs/<%= blog.id %>?_method=PATCH" method="POST">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" value="<%= blog.title %>" required >
+    <label for="author">Author</label>
+    <input type="text" id="author" name="author" value="<%= blog.author %>" required >
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category" value="<%= blog.category %>" required >
+    <label for="content">Content</label>
+    <textarea name="content" rows="10" id="content" required><%= blog.content.replace(/<\/?p>/g, "") %></textarea>
+    <button type="submit">Save Changes</button>
+</form>

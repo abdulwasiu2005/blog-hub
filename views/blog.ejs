@@ -1,0 +1,10 @@
+<h1><%= blog.title %></h1>
+<p><strong>Author:</strong> <%= blog.author %></p>
+<div>
+    <%- blog.content %>
+</div>
+    <a href="/blogs/<%= blog.id %>/edit">Edit Blog</a>
+<form action="/blogs/<%= blog.id %>?_method=DELETE" method="POST" 
+    onsubmit="return confirm('Are you sure you want to delete this blog? This action cannot be undone.')">
+    <button type="submit">Delete Blog</button>
+</form>

@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Hub | Ideas Worth Exploring</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+    <%- include("partials/header.ejs") %>
+
+    <main>
+        <!-- Hero section -->
+        <section class="bg-body-tertiary py-5">
+            <div class="container px-4 py-5">
+                <div class="row align-items-center g-5 py-3">
+                    <div class="col-lg-7">
+                        <span class="badge text-bg-primary mb-3">
+                            Welcome to Blog Hub
+                        </span>
+
+                        <h1 class="display-4 fw-bold lh-sm mb-4">
+                            Carefully Curated Blogs
+                            <span class="text-primary" style="color: #C28E5B !important;">From People Just Like You</span>
+                        </h1>
+
+                        <p class="lead text-body-secondary mb-4">
+                            A space where ideas come to life. Explore technology,
+                            creativity, lifestyle, food, and everyday inspiration.
+                            Discover fresh perspectives and find something worth
+                            thinking about.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="/blogs/random" class="btn btn-primary btn-lg">
+                                Explore a Random Blog
+                            </a>
+
+                            <a href="/all_topics" class="btn btn-outline-secondary btn-lg">
+                                Browse Topics
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 p-md-5">
+                                <span class="text-primary fw-semibold" style="color: #C28E5B !important;">
+                                    YOUR NEXT READ STARTS HERE
+                                </span>
+                                <h2 class="h3 fw-bold mt-3">
+                                    Curious minds are welcome.
+                                </h2>
+                                <p class="text-body-secondary mb-4">
+                                    From practical advice to personal interests,
+                                    there's always another perspective to discover.
+                                </p>
+                                <a href="/blogs" class="btn btn-dark">
+                                    View All Blogs
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics section -->
+        <section class="py-5">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Blog Hub at a Glance</h2>
+                    <p class="text-body-secondary">
+                        A little overview to help you get started.
+                    </p>
+                </div>
+
+                <div class="row g-4 text-center">
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="text-body-secondary mb-2">Published blogs</p>
+                                <p class="display-5 fw-bold text-primary mb-2" style="color: #C28E5B !important;">
+                                    <%= typeof totalBlogs === "number" ? totalBlogs : 0 %>
+                                </p>
+                                <p class="mb-0">Ideas and stories to explore</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="text-body-secondary mb-2">Topics</p>
+                                <p class="display-5 fw-bold text-primary mb-2" style="color: #C28E5B !important;">10</p>
+                                <p class="mb-0">Interests to discover</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="text-body-secondary mb-2">Your next step</p>
+                                <p class="h3 fw-bold mb-3">Start reading</p>
+                                <a href="/all_topics" class="btn btn-outline-primary">
+                                    Find a Topic
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics and discovery section -->
+        <section class="py-5 bg-body-tertiary" id="about">
+            <div class="container py-3">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <h2 class="fw-bold mb-3">Something for Every Curiosity</h2>
+                        <p class="text-body-secondary mb-0">
+                            Whether you're interested in technology, health,
+                            travel, finance, anime, or creative projects,
+                            Blog Hub brings different interests together in one place.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5 text-lg-end">
+                        <a href="/all_topics" class="btn btn-primary btn-lg">
+                            Explore All Topics
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social/community section -->
+        <section class="py-5">
+            <div class="container py-3">
+                <div class="card border-0 bg-primary text-white">
+                    <div class="card-body p-4 p-md-5 text-center new">
+                        <h2 class="fw-bold mb-3">Have an Idea to Share?</h2>
+                        <p class="lead mb-4">
+                            Add a new post and contribute your perspective
+                            to the growing collection of ideas.
+                        </p>
+                        <a href="/blogs/create" class="btn btn-light btn-lg">
+                            Create a Blog Post
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features section, in place of fabricated testimonials -->
+        
+<!-- Reader reviews -->
+<section class="py-5">
+    <div class="container py-3">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What Readers Say</h2>
+            <p class="text-secondary">
+                Thoughts and feedback from the Blog Hub community.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Review -->
+            <div class="col-12 col-md-4">
+                <article class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-primary fs-2 mb-3"
+                             aria-hidden="true">“</div>
+
+                        <blockquote class="mb-4">
+                            <p class="text-secondary">
+                                This is an amazing website. Interesting topics and lots of things to learn.
+                            </p>
+                        </blockquote>
+
+                        <div class="mt-auto">
+                            <h3 class="h6 fw-bold mb-1">Mufutau Abdulwasiu</h3>
+                            <p class="small text-secondary mb-0">
+                                Blog Hub reader
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Another Review -->
+            <div class="col-12 col-md-4">
+                <article class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-primary fs-2 mb-3"
+                             aria-hidden="true">“</div>
+
+                        <blockquote class="mb-4">
+                            <p class="text-secondary">
+                                Blog Hub makes blogging easier and seamless. You can literally stay in the comfort of your bedroom and get everything you need on this App xx
+                            </p>
+                        </blockquote>
+
+                        <div class="mt-auto">
+                            <h3 class="h6 fw-bold mb-1">Ope Mipo</h3>
+                            <p class="small text-secondary mb-0">
+                                Blog Hub reader
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="col-12 col-md-4">
+                <article class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-primary fs-2 mb-3"
+                             aria-hidden="true">“</div>
+
+                        <blockquote class="mb-4">
+                            <p class="text-secondary">
+                                I can't think of a better blog app. You're simply the best! :D 
+                            </p>
+                        </blockquote>
+
+                        <div class="mt-auto">
+                            <h3 class="h6 fw-bold mb-1">Olanre Waju</h3>
+                            <p class="small text-secondary mb-0">
+                                Blog Hub reader
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
